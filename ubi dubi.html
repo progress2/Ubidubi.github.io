@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body background="https://image.freepik.com/free-vector/celebration-background-of-balloons-and-confetti_1048-2223.jpg">
+
+<font size="7"> <h1> Astride and Izabella<h1>
+
+
+<font size="5" color= "black">
+<p> <center> Insert word </center> </p>
+<input type="text" name="word" id="w1">
+<button onclick="translate()"> Translate!</button>
+<p id="translated"> </p>
+<script>
+function translate(){
+var str=document.getElementById("w1").value;
+var text="";
+for (var i=0; i <str.length;i++){
+  if(str.charAt(i)=="a"||
+     str.charAt(i)=="e"||
+     str.charAt(i)=="o"||
+     str.charAt(i)=="u"||
+     str.charAt(i)=="i"){
+    text= text+"ub";
+  }
+  text= text + str.charAt(i);
+  }
+    document.getElementById("w1").innerHTML= text;
+  }
+</script>
+</body>
+</html>

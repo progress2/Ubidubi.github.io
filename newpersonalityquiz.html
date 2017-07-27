@@ -1,0 +1,52 @@
+<!DOCTYPE.HTML>
+<html>
+<body background= http://www.behindthevoiceactors.com/_img/shows/banner_1574.jpg>
+<heading><title>The Looney Tunes Show </title></heading>
+
+<p>1. You have a big test tomorrow so as soon as you go home you?</p>
+<p> <input type="radio" name="answer1" value="beauty sleep">Get you're beauty sleep </p>
+<!-- input type=radi makes it like a submittion where you have to click it.
+//name="answer1"because we need to categorize it.
+//value="beauty sleep"because we need to call it to compare like if you're answer is then -->
+<p> <input type="radio" name="answer1" value="review">You review you're notes to prepare to ace it</p>
+
+<p>2. what you're must have accessory?</p>
+<p> <input type="radio" name="answer2" value="scarf">a stylish scarf</p>
+<p> <input type="radio" name="answer2" value="gloves">A nice pair of glove</p>
+
+<button type="button" onclick=getResults()> click here!! </button>
+
+<script>
+function getResults(){
+var daffy=0;//daffy is the number of time you choose a . Set it equal to zero in beginning so the computer knows where to start.
+var bunny=0;//bunny is the numbber of time you choose b
+var question1=document.querySelector("input[name='answer1']:checked");// checked takes the checked choice as the input. document.querySelector say go collect the one with input name.it's like the boss and the code is the instruction to the computer;
+
+if (question1=="beauty sleep"){
+  daffy++;
+}
+if (question1=="review"){
+  bunny++;
+}
+var question2=document.querySelector("input[name='answer2']:checked");
+if (question2=="scarf"){
+  daffy++;
+}
+if (question2=="gloves"){
+  bunny++;
+}
+
+if( daffy> bunny){
+alert(" Spectacular! you are daffy duck!");
+}
+if(bunny> daffy){
+  alert("Hey what's up doc? you are bugs bunny!");
+}
+else {
+alert( "oops! hard to tell what you are");
+}
+}
+
+</script>
+</body>
+</html>
